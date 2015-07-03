@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/status', function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
     mcping('s1.thedeviantnetwork.com', 25565, function(err, response) {
         if (err) {
             // Some kind of error
