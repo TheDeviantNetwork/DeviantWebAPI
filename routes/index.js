@@ -34,7 +34,7 @@ function returnJson(res,data){
 }
 
 router.get('/status', function(req, res, next) {
-    if (req.param("poll")) {
+    if (req.param("poll") == true) {
         eventBus.once('status', function (data) {
             returnJson(res, data)
         });
