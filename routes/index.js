@@ -22,8 +22,6 @@ function checkServer(){
             if (response != null && lastStatus != null && response["num_players"] != lastStatus["num_players"])
                 eventBus.emit('status', response);
             lastStatus = response
-            console.log(response);
-            console.log(lastStatus);
         }
     }, 3000);
 }
